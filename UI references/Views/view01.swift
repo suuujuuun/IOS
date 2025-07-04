@@ -1,7 +1,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct view01: View {
     
     @State private var color: Color = .black
     var body : some View {
@@ -34,8 +34,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct view01_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        view01()
     }
 }
