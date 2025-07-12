@@ -1,13 +1,13 @@
 //
-//  Kyle_DictionaryUITestsLaunchTests.swift
-//  Kyle DictionaryUITests
+//  KyleSynonymsUITestsLaunchTests.swift
+//  KyleSynonymsUITests
 //
-//  Created by 이승준 on 7/5/25.
+//  Created by 이승준 on 7/10/25.
 //
 
 import XCTest
 
-final class Kyle_DictionaryUITestsLaunchTests: XCTestCase {
+final class KyleSynonymsUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

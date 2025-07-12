@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		5B2460082E1916CD006D339A /* PBXContainerItemProxy */ = {
+		5BA230772E1FD68300EE5650 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5B245FED2E1916CA006D339A /* Project object */;
+			containerPortal = 5BA2305C2E1FD68100EE5650 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5B245FF42E1916CA006D339A;
-			remoteInfo = "Kyle Dictionary";
+			remoteGlobalIDString = 5BA230632E1FD68100EE5650;
+			remoteInfo = KyleSynonyms;
 		};
-		5B2460122E1916CD006D339A /* PBXContainerItemProxy */ = {
+		5BA230812E1FD68300EE5650 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5B245FED2E1916CA006D339A /* Project object */;
+			containerPortal = 5BA2305C2E1FD68100EE5650 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5B245FF42E1916CA006D339A;
-			remoteInfo = "Kyle Dictionary";
+			remoteGlobalIDString = 5BA230632E1FD68100EE5650;
+			remoteInfo = KyleSynonyms;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B245FF52E1916CA006D339A /* Kyle Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kyle Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B2460072E1916CD006D339A /* Kyle DictionaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kyle DictionaryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B2460112E1916CD006D339A /* Kyle DictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kyle DictionaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA230642E1FD68100EE5650 /* KyleSynonyms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyleSynonyms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA230762E1FD68300EE5650 /* KyleSynonymsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyleSynonymsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA230802E1FD68300EE5650 /* KyleSynonymsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KyleSynonymsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5B245FF72E1916CA006D339A /* Kyle Dictionary */ = {
+		5BA230662E1FD68100EE5650 /* KyleSynonyms */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Kyle Dictionary";
+			path = KyleSynonyms;
 			sourceTree = "<group>";
 		};
-		5B24600A2E1916CD006D339A /* Kyle DictionaryTests */ = {
+		5BA230792E1FD68300EE5650 /* KyleSynonymsTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Kyle DictionaryTests";
+			path = KyleSynonymsTests;
 			sourceTree = "<group>";
 		};
-		5B2460142E1916CD006D339A /* Kyle DictionaryUITests */ = {
+		5BA230832E1FD68300EE5650 /* KyleSynonymsUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Kyle DictionaryUITests";
+			path = KyleSynonymsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B245FF22E1916CA006D339A /* Frameworks */ = {
+		5BA230612E1FD68100EE5650 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B2460042E1916CD006D339A /* Frameworks */ = {
+		5BA230732E1FD68300EE5650 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B24600E2E1916CD006D339A /* Frameworks */ = {
+		5BA2307D2E1FD68300EE5650 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,22 +72,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B245FEC2E1916CA006D339A = {
+		5BA2305B2E1FD68100EE5650 = {
 			isa = PBXGroup;
 			children = (
-				5B245FF72E1916CA006D339A /* Kyle Dictionary */,
-				5B24600A2E1916CD006D339A /* Kyle DictionaryTests */,
-				5B2460142E1916CD006D339A /* Kyle DictionaryUITests */,
-				5B245FF62E1916CA006D339A /* Products */,
+				5BA230662E1FD68100EE5650 /* KyleSynonyms */,
+				5BA230792E1FD68300EE5650 /* KyleSynonymsTests */,
+				5BA230832E1FD68300EE5650 /* KyleSynonymsUITests */,
+				5BA230652E1FD68100EE5650 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5B245FF62E1916CA006D339A /* Products */ = {
+		5BA230652E1FD68100EE5650 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B245FF52E1916CA006D339A /* Kyle Dictionary.app */,
-				5B2460072E1916CD006D339A /* Kyle DictionaryTests.xctest */,
-				5B2460112E1916CD006D339A /* Kyle DictionaryUITests.xctest */,
+				5BA230642E1FD68100EE5650 /* KyleSynonyms.app */,
+				5BA230762E1FD68300EE5650 /* KyleSynonymsTests.xctest */,
+				5BA230802E1FD68300EE5650 /* KyleSynonymsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +95,134 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B245FF42E1916CA006D339A /* Kyle Dictionary */ = {
+		5BA230632E1FD68100EE5650 /* KyleSynonyms */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B24601B2E1916CD006D339A /* Build configuration list for PBXNativeTarget "Kyle Dictionary" */;
+			buildConfigurationList = 5BA2308A2E1FD68300EE5650 /* Build configuration list for PBXNativeTarget "KyleSynonyms" */;
 			buildPhases = (
-				5B245FF12E1916CA006D339A /* Sources */,
-				5B245FF22E1916CA006D339A /* Frameworks */,
-				5B245FF32E1916CA006D339A /* Resources */,
+				5BA230602E1FD68100EE5650 /* Sources */,
+				5BA230612E1FD68100EE5650 /* Frameworks */,
+				5BA230622E1FD68100EE5650 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5B245FF72E1916CA006D339A /* Kyle Dictionary */,
+				5BA230662E1FD68100EE5650 /* KyleSynonyms */,
 			);
-			name = "Kyle Dictionary";
+			name = KyleSynonyms;
 			packageProductDependencies = (
 			);
-			productName = "Kyle Dictionary";
-			productReference = 5B245FF52E1916CA006D339A /* Kyle Dictionary.app */;
+			productName = KyleSynonyms;
+			productReference = 5BA230642E1FD68100EE5650 /* KyleSynonyms.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5B2460062E1916CD006D339A /* Kyle DictionaryTests */ = {
+		5BA230752E1FD68300EE5650 /* KyleSynonymsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B24601E2E1916CD006D339A /* Build configuration list for PBXNativeTarget "Kyle DictionaryTests" */;
+			buildConfigurationList = 5BA2308D2E1FD68300EE5650 /* Build configuration list for PBXNativeTarget "KyleSynonymsTests" */;
 			buildPhases = (
-				5B2460032E1916CD006D339A /* Sources */,
-				5B2460042E1916CD006D339A /* Frameworks */,
-				5B2460052E1916CD006D339A /* Resources */,
+				5BA230722E1FD68300EE5650 /* Sources */,
+				5BA230732E1FD68300EE5650 /* Frameworks */,
+				5BA230742E1FD68300EE5650 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5B2460092E1916CD006D339A /* PBXTargetDependency */,
+				5BA230782E1FD68300EE5650 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				5B24600A2E1916CD006D339A /* Kyle DictionaryTests */,
+				5BA230792E1FD68300EE5650 /* KyleSynonymsTests */,
 			);
-			name = "Kyle DictionaryTests";
+			name = KyleSynonymsTests;
 			packageProductDependencies = (
 			);
-			productName = "Kyle DictionaryTests";
-			productReference = 5B2460072E1916CD006D339A /* Kyle DictionaryTests.xctest */;
+			productName = KyleSynonymsTests;
+			productReference = 5BA230762E1FD68300EE5650 /* KyleSynonymsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5B2460102E1916CD006D339A /* Kyle DictionaryUITests */ = {
+		5BA2307F2E1FD68300EE5650 /* KyleSynonymsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B2460212E1916CD006D339A /* Build configuration list for PBXNativeTarget "Kyle DictionaryUITests" */;
+			buildConfigurationList = 5BA230902E1FD68300EE5650 /* Build configuration list for PBXNativeTarget "KyleSynonymsUITests" */;
 			buildPhases = (
-				5B24600D2E1916CD006D339A /* Sources */,
-				5B24600E2E1916CD006D339A /* Frameworks */,
-				5B24600F2E1916CD006D339A /* Resources */,
+				5BA2307C2E1FD68300EE5650 /* Sources */,
+				5BA2307D2E1FD68300EE5650 /* Frameworks */,
+				5BA2307E2E1FD68300EE5650 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5B2460132E1916CD006D339A /* PBXTargetDependency */,
+				5BA230822E1FD68300EE5650 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				5B2460142E1916CD006D339A /* Kyle DictionaryUITests */,
+				5BA230832E1FD68300EE5650 /* KyleSynonymsUITests */,
 			);
-			name = "Kyle DictionaryUITests";
+			name = KyleSynonymsUITests;
 			packageProductDependencies = (
 			);
-			productName = "Kyle DictionaryUITests";
-			productReference = 5B2460112E1916CD006D339A /* Kyle DictionaryUITests.xctest */;
+			productName = KyleSynonymsUITests;
+			productReference = 5BA230802E1FD68300EE5650 /* KyleSynonymsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B245FED2E1916CA006D339A /* Project object */ = {
+		5BA2305C2E1FD68100EE5650 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					5B245FF42E1916CA006D339A = {
+					5BA230632E1FD68100EE5650 = {
 						CreatedOnToolsVersion = 16.4;
 					};
-					5B2460062E1916CD006D339A = {
+					5BA230752E1FD68300EE5650 = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 5B245FF42E1916CA006D339A;
+						TestTargetID = 5BA230632E1FD68100EE5650;
 					};
-					5B2460102E1916CD006D339A = {
+					5BA2307F2E1FD68300EE5650 = {
 						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 5B245FF42E1916CA006D339A;
+						TestTargetID = 5BA230632E1FD68100EE5650;
 					};
 				};
 			};
-			buildConfigurationList = 5B245FF02E1916CA006D339A /* Build configuration list for PBXProject "Kyle Dictionary" */;
+			buildConfigurationList = 5BA2305F2E1FD68100EE5650 /* Build configuration list for PBXProject "KyleSynonyms" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5B245FEC2E1916CA006D339A;
+			mainGroup = 5BA2305B2E1FD68100EE5650;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5B245FF62E1916CA006D339A /* Products */;
+			productRefGroup = 5BA230652E1FD68100EE5650 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B245FF42E1916CA006D339A /* Kyle Dictionary */,
-				5B2460062E1916CD006D339A /* Kyle DictionaryTests */,
-				5B2460102E1916CD006D339A /* Kyle DictionaryUITests */,
+				5BA230632E1FD68100EE5650 /* KyleSynonyms */,
+				5BA230752E1FD68300EE5650 /* KyleSynonymsTests */,
+				5BA2307F2E1FD68300EE5650 /* KyleSynonymsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B245FF32E1916CA006D339A /* Resources */ = {
+		5BA230622E1FD68100EE5650 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B2460052E1916CD006D339A /* Resources */ = {
+		5BA230742E1FD68300EE5650 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B24600F2E1916CD006D339A /* Resources */ = {
+		5BA2307E2E1FD68300EE5650 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +232,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B245FF12E1916CA006D339A /* Sources */ = {
+		5BA230602E1FD68100EE5650 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B2460032E1916CD006D339A /* Sources */ = {
+		5BA230722E1FD68300EE5650 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B24600D2E1916CD006D339A /* Sources */ = {
+		5BA2307C2E1FD68300EE5650 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,20 +256,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5B2460092E1916CD006D339A /* PBXTargetDependency */ = {
+		5BA230782E1FD68300EE5650 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5B245FF42E1916CA006D339A /* Kyle Dictionary */;
-			targetProxy = 5B2460082E1916CD006D339A /* PBXContainerItemProxy */;
+			target = 5BA230632E1FD68100EE5650 /* KyleSynonyms */;
+			targetProxy = 5BA230772E1FD68300EE5650 /* PBXContainerItemProxy */;
 		};
-		5B2460132E1916CD006D339A /* PBXTargetDependency */ = {
+		5BA230822E1FD68300EE5650 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5B245FF42E1916CA006D339A /* Kyle Dictionary */;
-			targetProxy = 5B2460122E1916CD006D339A /* PBXContainerItemProxy */;
+			target = 5BA230632E1FD68100EE5650 /* KyleSynonyms */;
+			targetProxy = 5BA230812E1FD68300EE5650 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5B2460192E1916CD006D339A /* Debug */ = {
+		5BA230882E1FD68300EE5650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -333,7 +333,7 @@
 			};
 			name = Debug;
 		};
-		5B24601A2E1916CD006D339A /* Release */ = {
+		5BA230892E1FD68300EE5650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -390,7 +390,7 @@
 			};
 			name = Release;
 		};
-		5B24601C2E1916CD006D339A /* Debug */ = {
+		5BA2308B2E1FD68300EE5650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -410,7 +410,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sjun.Kyle-Dictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = sjun.KyleSynonyms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -418,7 +418,7 @@
 			};
 			name = Debug;
 		};
-		5B24601D2E1916CD006D339A /* Release */ = {
+		5BA2308C2E1FD68300EE5650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -438,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sjun.Kyle-Dictionary";
+				PRODUCT_BUNDLE_IDENTIFIER = sjun.KyleSynonyms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -446,7 +446,7 @@
 			};
 			name = Release;
 		};
-		5B24601F2E1916CD006D339A /* Debug */ = {
+		5BA2308E2E1FD68300EE5650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,16 +456,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sjun.Kyle-DictionaryTests";
+				PRODUCT_BUNDLE_IDENTIFIER = sjun.KyleSynonymsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kyle Dictionary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kyle Dictionary";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KyleSynonyms.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KyleSynonyms";
 			};
 			name = Debug;
 		};
-		5B2460202E1916CD006D339A /* Release */ = {
+		5BA2308F2E1FD68300EE5650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,16 +475,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sjun.Kyle-DictionaryTests";
+				PRODUCT_BUNDLE_IDENTIFIER = sjun.KyleSynonymsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kyle Dictionary.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Kyle Dictionary";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KyleSynonyms.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KyleSynonyms";
 			};
 			name = Release;
 		};
-		5B2460222E1916CD006D339A /* Debug */ = {
+		5BA230912E1FD68300EE5650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -492,16 +492,16 @@
 				DEVELOPMENT_TEAM = MA3C48PBAR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sjun.Kyle-DictionaryUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = sjun.KyleSynonymsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Kyle Dictionary";
+				TEST_TARGET_NAME = KyleSynonyms;
 			};
 			name = Debug;
 		};
-		5B2460232E1916CD006D339A /* Release */ = {
+		5BA230922E1FD68300EE5650 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -509,55 +509,55 @@
 				DEVELOPMENT_TEAM = MA3C48PBAR;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sjun.Kyle-DictionaryUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = sjun.KyleSynonymsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Kyle Dictionary";
+				TEST_TARGET_NAME = KyleSynonyms;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B245FF02E1916CA006D339A /* Build configuration list for PBXProject "Kyle Dictionary" */ = {
+		5BA2305F2E1FD68100EE5650 /* Build configuration list for PBXProject "KyleSynonyms" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B2460192E1916CD006D339A /* Debug */,
-				5B24601A2E1916CD006D339A /* Release */,
+				5BA230882E1FD68300EE5650 /* Debug */,
+				5BA230892E1FD68300EE5650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B24601B2E1916CD006D339A /* Build configuration list for PBXNativeTarget "Kyle Dictionary" */ = {
+		5BA2308A2E1FD68300EE5650 /* Build configuration list for PBXNativeTarget "KyleSynonyms" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B24601C2E1916CD006D339A /* Debug */,
-				5B24601D2E1916CD006D339A /* Release */,
+				5BA2308B2E1FD68300EE5650 /* Debug */,
+				5BA2308C2E1FD68300EE5650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B24601E2E1916CD006D339A /* Build configuration list for PBXNativeTarget "Kyle DictionaryTests" */ = {
+		5BA2308D2E1FD68300EE5650 /* Build configuration list for PBXNativeTarget "KyleSynonymsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B24601F2E1916CD006D339A /* Debug */,
-				5B2460202E1916CD006D339A /* Release */,
+				5BA2308E2E1FD68300EE5650 /* Debug */,
+				5BA2308F2E1FD68300EE5650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B2460212E1916CD006D339A /* Build configuration list for PBXNativeTarget "Kyle DictionaryUITests" */ = {
+		5BA230902E1FD68300EE5650 /* Build configuration list for PBXNativeTarget "KyleSynonymsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B2460222E1916CD006D339A /* Debug */,
-				5B2460232E1916CD006D339A /* Release */,
+				5BA230912E1FD68300EE5650 /* Debug */,
+				5BA230922E1FD68300EE5650 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5B245FED2E1916CA006D339A /* Project object */;
+	rootObject = 5BA2305C2E1FD68100EE5650 /* Project object */;
 }

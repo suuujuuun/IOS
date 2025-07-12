@@ -1,13 +1,13 @@
 //
-//  Kyle_DictionaryUITests.swift
-//  Kyle DictionaryUITests
+//  KyleSynonymsUITests.swift
+//  KyleSynonymsUITests
 //
-//  Created by 이승준 on 7/5/25.
+//  Created by 이승준 on 7/10/25.
 //
 
 import XCTest
 
-final class Kyle_DictionaryUITests: XCTestCase {
+final class KyleSynonymsUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
