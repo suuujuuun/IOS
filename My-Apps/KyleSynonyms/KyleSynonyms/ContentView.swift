@@ -18,6 +18,19 @@ struct DefinitionResponse: Decodable {
 }
 
 
+
+struct IconBubble: View {
+    let systemName: String
+
+    var body: some View {
+        BubbleView(item: CircleWord(word: "", score: 1.0, fixedRadius: 25)) {
+            Image(systemName: systemName)
+                .font(.system(size: 22, weight: .bold))
+                .foregroundColor(.white)
+        }
+    }
+}
+
 struct ContentView: View {
     @State private var inputWord: String = ""
     @State private var bubbles: [Bubble] = []
@@ -30,6 +43,9 @@ struct ContentView: View {
     @State private var scalingBubbleId: UUID?
     @State private var definition: (response: DefinitionResponse, position: CGPoint)?
     @State private var isLoadingDefinition: Bool = false
+    @State private var showingLicense = false
+    @State private var showingHistory = false
+    @State private var searchHistory: [String] = []
     
     private let centralBubbleId = UUID()
     private let initialMessage = "Enter a word"
@@ -65,6 +81,9 @@ struct ContentView: View {
                             .disableAutocorrection(true)
                             .foregroundColor(.white)
                             .multilineTextAlignment(.center)
+                            .onChange(of: inputWord) {
+                                lastRadius = nil
+                            }
                         }
                     } else { Text(inputWord) }
                 }
@@ -125,15 +144,54 @@ struct ContentView: View {
                 
                 // Definition View or Loading Indicator
                 ZStack {
-                    if isLoadingDefinition {
-                        ProgressView().scaleEffect(1.5)
-                    } else if let defData = definition {
-                        DefinitionView(word: defData.response.word, definition: defData.response.firstDefinition ?? "No definition found.")
-                            .position(x: geo.size.width / 2, y: defData.position.y + CircleWord(word: defData.response.word, score: 1.0).radius + 80)
-                            .transition(.scale.combined(with: .opacity))
-                            .onTapGesture {
-                                // This tap gesture with an empty action prevents the background tap from passing through
+                    Group {
+                        if isLoadingDefinition {
+                            AnyView(ProgressView().scaleEffect(1.5))
+                        } else if let defData = definition {
+                            let targetY = computeTargetY(for: defData.position, geoHeight: geo.size.height)
+                            
+                            AnyView(DefinitionView(word: defData.response.word, definition: defData.response.firstDefinition ?? "No definition found.")
+                                .position(x: geo.size.width / 2, y: targetY)
+                                .transition(.scale.combined(with: .opacity)))
+                        } else {
+                            EmptyView()
+                        }
+                    }
+                }
+                
+                // Icons for License and History
+                if isEditingInput {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Button(action: { showingHistory.toggle() }) {
+                                IconBubble(systemName: "clock")
                             }
+                            .sheet(isPresented: $showingHistory) {
+                                HistoryView(isPresented: $showingHistory, searchHistory: $searchHistory) {
+                                    word in
+                                    Task { await findSynonyms(for: word, viewSize: geo.size) }
+                                }
+                            }
+                            
+                            Button(action: { showingLicense.toggle() }) {
+                                IconBubble(systemName: "questionmark.circle")
+                            }
+                            .sheet(isPresented: $showingLicense) {
+                                LicenseView(isPresented: $showingLicense)
+                            }
+                        }
+                        .padding()
+                        
+                        // Developed by text
+                        if inputWord.isEmpty {
+                            Text("Developed by Kyle Lee")
+                                .font(.caption)
+                                .foregroundColor(.black)
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding(.bottom, 5)
+                        }
                     }
                 }
             }
@@ -162,7 +220,6 @@ struct ContentView: View {
         if isEditingInput && inputWord.isEmpty && lastRadius != nil {
             return CircleWord(word: initialMessage, score: 1.0, fixedRadius: lastRadius)
         }
-        lastRadius = nil
         return CircleWord(word: inputWord.isEmpty ? initialMessage : inputWord, score: 1.0)
     }
     
@@ -170,6 +227,7 @@ struct ContentView: View {
         await MainActor.run {
             self.inputWord = word
             withAnimation { self.definition = nil }
+            if !searchHistory.contains(word) { searchHistory.insert(word, at: 0) }
         }
         let wordToSearch = word
         await MainActor.run {
@@ -261,6 +319,19 @@ struct ContentView: View {
     
     private func index(of bubble: Bubble) -> Int {
         bubbles.firstIndex { $0.id == bubble.id } ?? 0
+    }
+    
+    private func computeTargetY(for pos: CGPoint, geoHeight: CGFloat) -> CGFloat {
+        let definitionViewHeight: CGFloat = 200 // Approximate height of the definition view
+        let bubbleRadius = CircleWord(word: "", score: 1.0).radius
+        
+        let targetY: CGFloat
+        if pos.y + bubbleRadius + 80 + definitionViewHeight > geoHeight { // If definition view goes off screen below
+            targetY = pos.y - bubbleRadius - 80 - definitionViewHeight
+        } else { // Otherwise, place it below
+            targetY = pos.y + bubbleRadius + 80
+        }
+        return targetY
     }
 }
 
