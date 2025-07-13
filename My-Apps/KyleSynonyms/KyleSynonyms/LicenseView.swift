@@ -38,16 +38,33 @@ struct LicenseView: View {
                         .cornerRadius(15)
                         .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
 
-
-                        // Free Dictionary API
+                        // English Word Frequency
                         VStack(alignment: .leading, spacing: 8) {
-                            Text("Free Dictionary API")
+                            Text("English Word Frequency")
                                 .font(.headline)
                                 .fontWeight(.bold)
-                            Text("Provides word definitions when a user long-presses on a word bubble.")
+                            Text("The word list used in this app is based on the frequency list from hermitdave/FrequencyWords, provided under the MIT License.")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
-                            Button("Visit Free Dictionary API") { 
+                            Button("View on GitHub") { 
+                                openURL(URL(string: "https://github.com/hermitdave/FrequencyWords")!)
+                            }
+                                .font(.caption)
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(15)
+                        .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
+
+                        // DictionaryAPI.dev
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("DictionaryAPI.dev")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            Text("Provides word definitions under the CC BY-SA 3.0 license when a user long-presses on a word bubble.")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            Button("Visit DictionaryAPI.dev") { 
                                 openURL(URL(string: "https://dictionaryapi.dev/")!)
                             }
                                 .font(.caption)
