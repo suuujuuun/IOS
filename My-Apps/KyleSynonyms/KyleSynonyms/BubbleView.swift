@@ -2,9 +2,14 @@ import SwiftUI
 
 // MARK: - Individual Bubble View
 struct BubbleView<Content: View>: View {
+    
+    @EnvironmentObject var motion: MotionManager
+    @EnvironmentObject var themeManager: ThemeManager
+    
     let item: CircleWord
     let content: Content
-
+    
+    
     init(item: CircleWord, @ViewBuilder content: () -> Content) {
         self.item = item
         self.content = content()
@@ -16,7 +21,7 @@ struct BubbleView<Content: View>: View {
             
             // Layer 1: The deep blue base color of the bubble
             Circle()
-                .fill(Color(red: 0.2, green: 0.4, blue: 0.9))
+                .fill(themeManager.currentTheme.bubbleBaseColor)
 
             // Layer 2: A radial gradient to create a sense of spherical volume
             Circle()
@@ -48,11 +53,16 @@ struct BubbleView<Content: View>: View {
 
             // Layer 4: A crisp, "specular" highlight for a glassy look
             Circle()
-                .fill(Color.white)
-                .frame(width: item.diameter * 0.2, height: item.diameter * 0.2)
-                .blur(radius: 3)
-                .offset(x: -item.radius * 0.4, y: -item.radius * 0.5)
-                .opacity(0.7)
+               .fill(Color.white)
+               .frame(width: item.diameter * 0.2, height: item.diameter * 0.2)
+               .blur(radius: 3)
+               // highlight의 위치를 휴대폰 기울기에 따라 동적으로 변경!
+               .offset(
+                   x: -item.radius * 0.5 + motion.x * 20,
+                   y: -item.radius * 0.5 + motion.y * 20
+               )
+               .opacity(0.7)
+
 
             // Layer 5: A subtle bottom reflection (rim light)
             Circle()
@@ -68,11 +78,10 @@ struct BubbleView<Content: View>: View {
                 .blur(radius: 2)
 
 
-            // MARK: - Content
             content
                 .font(.system(size: item.radius * 0.45, weight: .bold, design: .rounded))
-                .foregroundColor(.white)
-                .shadow(color: .black.opacity(0.6), radius: 5, x: 2, y: 3) // More pronounced shadow for text
+                .foregroundColor(themeManager.currentTheme.textColor) // 텍스트 색상 적용
+                .shadow(color: .black.opacity(0.6), radius: 5, x: 2, y: 3)
                 .lineLimit(2)
                 .minimumScaleFactor(0.5)
                 .multilineTextAlignment(.center)

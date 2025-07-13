@@ -32,6 +32,7 @@ struct IconBubble: View {
 }
 
 struct ContentView: View {
+    @EnvironmentObject var themeManager: ThemeManager
     @State private var inputWord: String = ""
     @State private var bubbles: [Bubble] = []
     @State private var appeared: Set<UUID> = []
@@ -59,7 +60,7 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Color.white.ignoresSafeArea()
+                themeManager.currentTheme.backgroundColor.ignoresSafeArea()
 
                 // Central Bubble
                 BubbleView(item: createCentralBubble()) {
@@ -165,21 +166,29 @@ struct ContentView: View {
                         Spacer()
                         HStack {
                             Spacer()
+                            // 1. 테마 변경 버튼
+                            Button(action: { themeManager.cycleTheme() }) {
+                                IconBubble(systemName: "paintbrush")
+                            }
+
+                            // 2. 검색 기록 버튼
                             Button(action: { showingHistory.toggle() }) {
                                 IconBubble(systemName: "clock")
                             }
                             .sheet(isPresented: $showingHistory) {
-                                HistoryView(isPresented: $showingHistory, searchHistory: $searchHistory) {
-                                    word in
+                                HistoryView(isPresented: $showingHistory, searchHistory: $searchHistory) { word in
                                     Task { await findSynonyms(for: word, viewSize: geo.size) }
                                 }
+                                .environmentObject(themeManager)
                             }
                             
+                            // 3. 라이선스 버튼
                             Button(action: { showingLicense.toggle() }) {
                                 IconBubble(systemName: "questionmark.circle")
                             }
                             .sheet(isPresented: $showingLicense) {
                                 LicenseView(isPresented: $showingLicense)
+                                    .environmentObject(themeManager)
                             }
                         }
                         .padding()
@@ -338,5 +347,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(MotionManager())
+            .environmentObject(ThemeManager())
     }
 }

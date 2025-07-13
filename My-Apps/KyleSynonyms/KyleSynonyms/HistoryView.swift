@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct HistoryView: View {
+    
+    @EnvironmentObject var themeManager: ThemeManager
     @Binding var isPresented: Bool
     @Binding var searchHistory: [String]
     var onSelectWord: (String) -> Void // Add a closure for word selection
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Color(red: 0.95, green: 0.95, blue: 0.97).ignoresSafeArea()
+            themeManager.currentTheme.secondaryBackgroundColor.ignoresSafeArea()
 
             VStack {
                 Text("Search History")
