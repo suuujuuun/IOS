@@ -38,23 +38,6 @@ struct LicenseView: View {
                         .cornerRadius(15)
                         .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
 
-                        // Datamuse API
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Datamuse API")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            Text("Used as a secondary source for fetching synonyms and related words, enriching the results from the local model.")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                            Button("Visit Datamuse API") { 
-                                openURL(URL(string: "https://www.datamuse.com/api/")!)
-                            }
-                                .font(.caption)
-                        }
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(15)
-                        .shadow(color: .black.opacity(0.05), radius: 5, x: 0, y: 2)
 
                         // Free Dictionary API
                         VStack(alignment: .leading, spacing: 8) {

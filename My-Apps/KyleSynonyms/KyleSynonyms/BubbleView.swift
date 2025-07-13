@@ -77,6 +77,16 @@ struct BubbleView<Content: View>: View {
                 .scaleEffect(0.95)
                 .blur(radius: 2)
 
+            // MARK: - Decorative Rings
+            if item.isCore {
+                RingView(color: .green.opacity(0.8), rotationDegrees: 60)
+                    .padding(item.radius * 0.1)
+            }
+            
+            if item.level == "advanced" {
+                RingView(color: .red.opacity(0.7), rotationDegrees: -60)
+                    .padding(item.radius * 0.1)
+            }
 
             content
                 .font(.system(size: item.radius * 0.45, weight: .bold, design: .rounded))
