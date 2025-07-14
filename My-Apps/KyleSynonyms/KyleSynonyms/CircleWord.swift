@@ -1,4 +1,3 @@
-
 import SwiftUI
 
 struct CircleWord: Identifiable, Decodable {
@@ -39,48 +38,6 @@ struct CircleWord: Identifiable, Decodable {
         let calculatedRadius = baseSize + (CGFloat(word.count) * sizePerCharacter)
         return min(max(minRadius, calculatedRadius), maxRadius)
     }
-    
+
     var diameter: CGFloat { radius * 2 }
 }
-
-// A view to draw the decorative ring (torus)
-struct RingView: View {
-    let color: Color
-    let rotationDegrees: Double
-    
-    var body: some View {
-        Torus()
-            .stroke(color, lineWidth: 5)
-            .rotation3DEffect(
-                .degrees(rotationDegrees),
-                axis: (x: 1, y: 0.5, z: 0)
-            )
-    }
-}
-
-// A simple Torus shape
-struct Torus: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let majorRadius = min(rect.width, rect.height) / 2
-        let minorRadius = majorRadius * 0.1 // Adjust for thickness
-        let center = CGPoint(x: rect.midX, y: rect.midY)
-        
-        path.addEllipse(in: CGRect(
-            x: center.x - majorRadius,
-            y: center.y - majorRadius,
-            width: majorRadius * 2,
-            height: majorRadius * 2
-        ))
-        
-        path.addEllipse(in: CGRect(
-            x: center.x - (majorRadius - minorRadius),
-            y: center.y - (majorRadius - minorRadius),
-            width: (majorRadius - minorRadius) * 2,
-            height: (majorRadius - minorRadius) * 2
-        ))
-        
-        return path
-    }
-}
-

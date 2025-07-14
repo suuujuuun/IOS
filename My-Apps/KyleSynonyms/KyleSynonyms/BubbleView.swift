@@ -2,14 +2,14 @@ import SwiftUI
 
 // MARK: - Individual Bubble View
 struct BubbleView<Content: View>: View {
-    
+
     @EnvironmentObject var motion: MotionManager
     @EnvironmentObject var themeManager: ThemeManager
-    
+
     let item: CircleWord
     let content: Content
-    
-    
+
+
     init(item: CircleWord, @ViewBuilder content: () -> Content) {
         self.item = item
         self.content = content()
@@ -17,13 +17,10 @@ struct BubbleView<Content: View>: View {
 
     var body: some View {
         ZStack {
-            // MARK: - Bubble Background & Core Layers
-            
-            // Layer 1: The deep blue base color of the bubble
+            // MARK: - Layer 1: Bubble Background & Core Layers
             Circle()
                 .fill(themeManager.currentTheme.bubbleBaseColor)
 
-            // Layer 2: A radial gradient to create a sense of spherical volume
             Circle()
                 .fill(
                     RadialGradient(
@@ -38,7 +35,6 @@ struct BubbleView<Content: View>: View {
                 )
                 .opacity(0.8)
 
-            // Layer 3: A sharp, top-down highlight to simulate overhead light
             Circle()
                 .fill(
                     LinearGradient(
@@ -47,24 +43,20 @@ struct BubbleView<Content: View>: View {
                         endPoint: .bottom
                     )
                 )
-                .scaleEffect(0.9) // Slightly inset
+                .scaleEffect(0.9)
                 .blur(radius: 2)
                 .opacity(0.5)
 
-            // Layer 4: A crisp, "specular" highlight for a glassy look
             Circle()
                .fill(Color.white)
                .frame(width: item.diameter * 0.2, height: item.diameter * 0.2)
                .blur(radius: 3)
-               // highlight의 위치를 휴대폰 기울기에 따라 동적으로 변경!
                .offset(
                    x: -item.radius * 0.5 + motion.x * 20,
                    y: -item.radius * 0.5 + motion.y * 20
                )
                .opacity(0.7)
 
-
-            // Layer 5: A subtle bottom reflection (rim light)
             Circle()
                 .stroke(
                     LinearGradient(
@@ -77,20 +69,24 @@ struct BubbleView<Content: View>: View {
                 .scaleEffect(0.95)
                 .blur(radius: 2)
 
-            // MARK: - Decorative Rings
-            if item.isCore {
-                RingView(color: .green.opacity(0.8), rotationDegrees: 60)
-                    .padding(item.radius * 0.1)
-            }
-            
-            if item.level == "advanced" {
-                RingView(color: .red.opacity(0.7), rotationDegrees: -60)
-                    .padding(item.radius * 0.1)
+            // MARK: - Layer 2: Color Dot Indicator
+            if item.isCore || item.level == "advanced" {
+                Circle()
+                    // isCore는 빨간색, advanced는 보라색 점으로 표시
+                    .fill(item.isCore ? Color.red : Color.purple)
+                    // 점의 크기를 매우 작게 설정
+                    .frame(width: item.radius * 0.2, height: item.radius * 0.2)
+                    .overlay(
+                        Circle().stroke(Color.black.opacity(0.2), lineWidth: 1)
+                    )
+                    // offset을 이용해 점을 오른쪽 위로 이동
+                    .offset(x: item.radius * 0.6, y: -item.radius * 0.6)
             }
 
+            // MARK: - Layer 3: Content
             content
                 .font(.system(size: item.radius * 0.45, weight: .bold, design: .rounded))
-                .foregroundColor(themeManager.currentTheme.textColor) // 텍스트 색상 적용
+                .foregroundColor(themeManager.currentTheme.textColor)
                 .shadow(color: .black.opacity(0.6), radius: 5, x: 2, y: 3)
                 .lineLimit(2)
                 .minimumScaleFactor(0.5)
@@ -98,8 +94,7 @@ struct BubbleView<Content: View>: View {
                 .padding(item.radius * 0.15)
         }
         .frame(width: item.diameter, height: item.diameter)
-        .compositingGroup() // Group layers for better performance
-        // Add a soft drop shadow to lift the bubble off the background
+        .compositingGroup()
         .shadow(color: .black.opacity(0.35), radius: 10, x: 0, y: 8)
     }
 }
