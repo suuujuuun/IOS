@@ -1,6 +1,5 @@
 # IOS Training Personal Project
 
 -todolist
-![todo](todo.png)
-
+<img src="todo.png" alt="todo" width="300">
 
