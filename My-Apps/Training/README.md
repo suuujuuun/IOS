@@ -1,5 +1,6 @@
 # IOS Training Personal Project
 
--todolist
+* todolist
+
 <img src="todo.png" alt="todo" width="300">
 
